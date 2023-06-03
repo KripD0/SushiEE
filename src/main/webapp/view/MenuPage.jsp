@@ -1,31 +1,32 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!doctype html>
 <html lang="ru">
 <head>
   <meta charset="utf-8">
   <title>Фудзи-Суши: Меню</title>
-  <link rel="icon" href="/icon.png"/>
-  <link rel="stylesheet" href="/css/mystyle.css"/>
-  <script src="/js/makeOrder.js"></script> <!--Подкючение джс файла-->
+  <link rel="icon" href="${pageContext.request.contextPath}/icon.png"/>
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/css/mystyle.css"/>
+  <script src="${pageContext.request.contextPath}/js/makeOrder.js"></script> <!--Подкючение джс файла-->
 </head>
 
 <body>
 
 <header>
   <h1>Фудзи-Суши</h1>
-  <img src="/icon.png" alt="Логотип" class="logo">
+  <img src="${pageContext.request.contextPath}/icon.png" alt="Логотип" class="logo">
 </header>
 
 <nav>
   <ul>
-    <li><a href="/index.jsp">Главная</a></li>
-    <li><a href="MenuPage.html">Меню</a></li>
-    <li><a href="PromoPage.html" style="padding-right: 5%">Скидки</a></li>
+    <li><a href="${pageContext.request.contextPath}/index.jsp">Главная</a></li>
+    <li><a href="MenuPage.jsp">Меню</a></li>
+    <li><a href="PromoPage.jsp" style="padding-right: 5%">Скидки</a></li>
     <li>
       <a style="padding-right: 1%;padding-left: 1%;border-right: 0;" id = "cart" onclick="addProducts();openOrderWindow();"> 0 </a><!--Смещение внутри элемента паддинг лефт райт-->
     </li>
     <li>
       <a style="padding-right: 1%;padding-left: 1%;border-left: 0;" onclick="addProducts();openOrderWindow();">
-        <img src="/img/корзина.png" alt="КОРЗИНА" style="height:30px;width:30px;"></a>
+        <img src="${pageContext.request.contextPath}/img/корзина.png" alt="КОРЗИНА" style="height:30px;width:30px;"></a>
     </li>
   </ul>
 </nav>
@@ -33,7 +34,7 @@
   <h1> Суши</h1>
   <table>
     <tr>
-      <td><img src="/img/1%20СУШИ%20С%20КРЕВЕТКОЙ.jpg" alt="СУШИ С КРЕВЕТКОЙ"></td>
+      <td><img src="${pageContext.request.contextPath}/img/1%20СУШИ%20С%20КРЕВЕТКОЙ.jpg" alt="СУШИ С КРЕВЕТКОЙ"></td>
       <td>
         <h2 class="products">СУШИ С КРЕВЕТКОЙ</h2>
         <h4>Нарезка тунца самой высокой категории, обладающей ярко выраженным вкусом и нежной текстурой.
@@ -45,7 +46,7 @@
       </td>
     </tr>
     <tr>
-      <td><img src="/img/2%20СУШИ%20С%20ЛОСОСЕМ.jpg" alt="СУШИ С ЛОСОСЕМ"></td>
+      <td><img src="${pageContext.request.contextPath}/img/2%20СУШИ%20С%20ЛОСОСЕМ.jpg" alt="СУШИ С ЛОСОСЕМ"></td>
       <td>
         <h2 class="products">СУШИ С ЛОСОСЕМ</h2>
         <h4>Сырые нарезки свежего лосося на рисе, подаются с соевым соусом и имеют нежный вкус с лёгкой сладостью.</h4>
@@ -56,7 +57,7 @@
       </td>
     </tr>
     <tr>
-      <td><img src="/img/3%20СУШИ%20С%20ТУНЦОМ%20БЛЮФИН.jpg" alt="СУШИ С ТУНЦОМ БЛЮФИН"></td>
+      <td><img src="${pageContext.request.contextPath}/img/3%20СУШИ%20С%20ТУНЦОМ%20БЛЮФИН.jpg" alt="СУШИ С ТУНЦОМ БЛЮФИН"></td>
       <td>
         <h2 class="products">СУШИ С ТУНЦОМ БЛЮФИН</h2>
         <h4>Свежая креветка на рисе, более мягкая и сладковатая, чем другие виды суши.
@@ -68,7 +69,7 @@
       </td>
     </tr>
     <tr>
-      <td><img src="/img/4%20СУШИ%20С%20ТУНЦОМ%20ТОРО.jpg" alt="СУШИ С ТУНЦОМ ТОРО"></td>
+      <td><img src="${pageContext.request.contextPath}/img/4%20СУШИ%20С%20ТУНЦОМ%20ТОРО.jpg" alt="СУШИ С ТУНЦОМ ТОРО"></td>
       <td>
         <h2 class="products">СУШИ С ТУНЦОМ ТОРО</h2>
         <h4>Наиболее роскошный и дорогой вид тунца, имеющий мраморную структуру, подается в виде
@@ -80,7 +81,7 @@
       </td>
     </tr>
     <tr>
-      <td><img src="/img/5%20СУШИ%20С%20УГРЁМ.jpg" alt="СУШИ С УГРЁМ"></td>
+      <td><img src="${pageContext.request.contextPath}/img/5%20СУШИ%20С%20УГРЁМ.jpg" alt="СУШИ С УГРЁМ"></td>
       <td>
         <h2 class="products">СУШИ С УГРЁМ</h2>
         <h4>Роскошные кусочки угря на кусочках риса, подаются с вяленым имбирем для нейтрализации жира и соевым
@@ -99,7 +100,7 @@
   <h1>Сеты роллов</h1>
   <table>
     <tr>
-      <td><img src="/img/6%20СЕТ%20АФРИКАНСКИЙ.png" alt="СЕТ АФРИКАНСКИЙ"></td>
+      <td><img src="${pageContext.request.contextPath}/img/6%20СЕТ%20АФРИКАНСКИЙ.png" alt="СЕТ АФРИКАНСКИЙ"></td>
       <td>
         <h2 class="products">СЕТ АФРИКАНСКИЙ</h2>
         <h4>Африканские страсти кипят в этом сете! Много лосося, краба и новый ролл с
@@ -111,7 +112,7 @@
       </td>
     </tr>
     <tr>
-      <td><img src="/img/7%20СЕТ%20ИКАРИ.png" alt="СЕТ ИКАРИ"></td>
+      <td><img src="${pageContext.request.contextPath}/img/7%20СЕТ%20ИКАРИ.png" alt="СЕТ ИКАРИ"></td>
       <td>
         <h2 class="products">СЕТ ИКАРИ</h2>
         <h4>WOW! В меню кальмар! Два ролла с кальмаром в одном сете, чтобы вы
@@ -123,7 +124,7 @@
       </td>
     </tr>
     <tr>
-      <td><img src="/img/8%20СЕТ%20ИНТЕРЕСНЫЙ%20.png" alt="СЕТ ИНТЕРЕСНЫЙ"></td>
+      <td><img src="${pageContext.request.contextPath}/img/8%20СЕТ%20ИНТЕРЕСНЫЙ%20.png" alt="СЕТ ИНТЕРЕСНЫЙ"></td>
       <td>
         <h2 class="products">СЕТ ИНТЕРЕСНЫЙ</h2>
         <h4>Тебе захочется пробовать его снова и снова, и каждый раз он будет
@@ -135,7 +136,7 @@
       </td>
     </tr>
     <tr>
-      <td><img src="/img/9%20СЕТ%20ИНЬ-ЯНЬ.png" alt="СЕТ ИНЬ-ЯНЬ"></td>
+      <td><img src="${pageContext.request.contextPath}/img/9%20СЕТ%20ИНЬ-ЯНЬ.png" alt="СЕТ ИНЬ-ЯНЬ"></td>
       <td>
         <h2 class="products">СЕТ ИНЬ-ЯНЬ</h2>
         <h4>Идеально подойдёт для романтического ужина, сет заряжен на любовь и гармонию.</h4>
@@ -146,7 +147,7 @@
       </td>
     </tr>
     <tr>
-      <td><img src="/img/10%20СЕТ%20СОТНЯ.png" alt="СЕТ СОТНЯ"></td>
+      <td><img src="${pageContext.request.contextPath}/img/10%20СЕТ%20СОТНЯ.png" alt="СЕТ СОТНЯ"></td>
       <td>
         <h2 class="products">СЕТ СОТНЯ</h2>
         <h4>В сто раз больше удовольствия! Вокруг этого сета друзья собираются сами.</h4>
@@ -163,7 +164,7 @@
   <h1>Соусы и напитки</h1>
   <table>
     <tr>
-      <td><img src="/img/14%20НАПИТОК%20КОЛА%20ЧЕРНОГОЛОВКА.png" alt="НАПИТОК КОЛА ЧЕРНОГОЛОВКА"></td>
+      <td><img src="${pageContext.request.contextPath}/img/14%20НАПИТОК%20КОЛА%20ЧЕРНОГОЛОВКА.png" alt="НАПИТОК КОЛА ЧЕРНОГОЛОВКА"></td>
       <td>
         <h2 class="products">НАПИТОК КОЛА ЧЕРНОГОЛОВКА</h2>
         <h4>Любимый вкус колы в бутылке 0.5л!</h4>
@@ -174,7 +175,7 @@
       </td>
     </tr>
     <tr>
-      <td><img src="/img/15%20МОРС%20БОДРЯЩИЙ%20ЛИМОН.png" alt="МОРС БОДРЯЩИЙ ЛИМОН"></td>
+      <td><img src="${pageContext.request.contextPath}/img/15%20МОРС%20БОДРЯЩИЙ%20ЛИМОН.png" alt="МОРС БОДРЯЩИЙ ЛИМОН"></td>
       <td>
         <h2 class="products">МОРС БОДРЯЩИЙ ЛИМОН</h2>
         <h4>Освежающий и лёгкий, заряжает энергией и хорошо утоляет жажду!</h4>
@@ -185,7 +186,7 @@
       </td>
     </tr>
     <tr>
-      <td><img src="/img/11%20ВАСАБИ.png" alt="ВАСАБИ"></td>
+      <td><img src="${pageContext.request.contextPath}/img/11%20ВАСАБИ.png" alt="ВАСАБИ"></td>
       <td>
         <h2 class="products">ВАСАБИ</h2>
         <h4>Ощутите яркий взрыв вкуса с васаби! Это пряная и ароматная приправа, которая послужит идеальным дополнением к вашим блюдам!</h4>
@@ -196,7 +197,7 @@
       </td>
     </tr>
     <tr>
-      <td><img src="/img/12%20ИМБИРЬ.png" alt="ИМБИРЬ"></td>
+      <td><img src="${pageContext.request.contextPath}/img/12%20ИМБИРЬ.png" alt="ИМБИРЬ"></td>
       <td>
         <h2 class="products">ИМБИРЬ</h2>
         <h4>Имбирь — традиционная японская приправа, которая подчеркивает вкус рыбы и суши.
@@ -209,7 +210,7 @@
       </td>
     </tr>
     <tr>
-      <td><img src="/img/13%20СОУС%20СОЕВЫЙ.png" alt="СОУС СОЕВЫЙ"></td>
+      <td><img src="${pageContext.request.contextPath}/img/13%20СОУС%20СОЕВЫЙ.png" alt="СОУС СОЕВЫЙ"></td>
       <td>
         <h2 class="products">СОУС СОЕВЫЙ</h2>
         <h4>Соевый соус — это необходимый элемент любого японского блюда, который подчеркивает вкус ингредиентов и яркие нотки соевых бобов,

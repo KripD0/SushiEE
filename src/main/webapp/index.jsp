@@ -18,8 +18,8 @@
 <nav>
   <ul>
     <li><a href="index.jsp">Главная</a></li><!--Список который кликлабельный-->
-    <li><a href="view/MenuPage.html">Меню</a></li>
-    <li><a href="view/PromoPage.html">Скидки</a></li>
+    <li><a href="view/MenuPage.jsp">Меню</a></li>
+    <li><a href="view/PromoPage.jsp">Скидки</a></li>
   </ul>
 </nav>
 

@@ -1,24 +1,25 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!doctype html>
 <html lang="ru" xmlns="http://www.w3.org/1999/html">
 <head>
   <meta charset="utf-8">
   <title>Фудзи-Суши: Скидки</title>
-  <link rel="icon" href="/icon.png"/>
-  <link rel="stylesheet" href="/css/mystyle.css"/>
-  <script src="/js/emailPromo.js"></script>
+  <link rel="icon" href="${pageContext.request.contextPath}/icon.png"/>
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/css/mystyle.css"/>
+  <script src="${pageContext.request.contextPath}/js/emailPromo.js"></script>
 </head>
 
 <body>
 
 <header>
   <h1>Фудзи-Суши</h1>
-  <img src="/icon.png" alt="Логотип" class="logo">
+  <img src="${pageContext.request.contextPath}/icon.png" alt="Логотип" class="logo">
 </header>
 <nav> <!--Навигация страницы-->
   <ul>
-    <li><a href="/index.jsp">Главная</a></li>
-    <li><a href="MenuPage.html">Меню</a></li>
-    <li><a href="PromoPage.html">Скидки</a></li>
+    <li><a href="${pageContext.request.contextPath}/index.jsp">Главная</a></li>
+    <li><a href="MenuPage.jsp">Меню</a></li>
+    <li><a href="PromoPage.jsp">Скидки</a></li>
   </ul>
 </nav>
 <section>
@@ -26,15 +27,15 @@
   <table>
     <tr>
       <td>
-        <img src="/img/01%20СТУБИЛЕТ.png" alt="СТУДБИЛЕТ С СЕТОМ">
+        <img src="${pageContext.request.contextPath}/img/01%20СТУБИЛЕТ.png" alt="СТУДБИЛЕТ С СЕТОМ">
         <h1>Постоянная скидка 10% на всё меню при предъявлении студенческого билета!</h1>
       </td>
       <td>
-        <img src="/img/02%20БЕСПЛАТНАЯ%20ДОСТАВКА.png" alt="СУШИ ЕДУТ К ВАМ">
+        <img src="${pageContext.request.contextPath}/img/02%20БЕСПЛАТНАЯ%20ДОСТАВКА.png" alt="СУШИ ЕДУТ К ВАМ">
         <h1>Бесплатная доставка при заказе на сумму от 1111₽!</h1>
       </td>
       <td>
-        <img src="/img/03%2010%20ПРОЦЕНТОВ.png" alt="ДЕСЯТЫЙ РОЛЛ СВЕТИТСЯ">
+        <img src="${pageContext.request.contextPath}/img/03%2010%20ПРОЦЕНТОВ.png" alt="ДЕСЯТЫЙ РОЛЛ СВЕТИТСЯ">
         <h1>Скидка 10% на заказы от 3000₽! </h1>
       </td>
     </tr>
