@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;700;900&display=swap');
+
+/*
+#ccffff - regular
+#c0c0f0 - darker (border)
+#fff0f0 - peach, for sections
+*/
+img {
+  vertical-align: center;
+  horiz-align: center;
+  border-radius: 10px;
+  width: 300px;
+}
+
+.logo {
+  width: 10%;
+}
+
+.networks {
+  width: 0.9em;
+  height: 0.9em;
+}
+
+footer {
+  background-color: #ccccff;
+  padding: 15px;
+}
+
+h1, h2 {
+  font-weight: 900;
+  margin: 0.5em;
+}
+
+h3, h4, h5, h6 {
+  font-weight: 500;
+  margin: 0.5em 0 0 0;
+}
+
+article {
+  width: 60%;
+  margin: 1em auto; /*Отсуп за границу - для артИкла, auto центрирует по середине*/
+}
+
+span {
+  font-weight: 700;
+  font-size: 1.8em;
+}
+
+section {
+  margin-bottom: 1%;
+  background-color: #fff0f0;
+  border: 5px solid #ccccff;
+  border-radius: 5%;
+}
+
+body {
+  background-color: #fff0f0; /*цвет фона*/
+  font-family: "Mulish", sans-serif;
+  font-size: 21px;
+  text-align: center;
+}
+
+
+input[type="button"] {
+  background-color: #ccccff;
+  border-radius: 22px;
+  border: 5px solid #c0c0f0;
+  width: 55px;
+  height: 55px;
+  font-weight: 700;
+  cursor: pointer;
+  margin: 2%;
+  font-family: "Mulish", sans-serif;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+input[type="button"]:hover {
+  background-color: #c0c0f0; /*цвет ячейки*/
+}
+
+
+input[type="button"]:active {
+  color: #fff0f0; /*цвет ячейки*/
+}
+
+header {
+  margin-top: 75px;
+}
+
+
+input[type="email"] {
+  border-radius: 1%;
+  border: 5px solid #ccccff;
+  width: 420px;
+  height: 42px;
+  cursor: text;
+  font-family: "Mulish", sans-serif;
+  font-size: 21px;
+}
+
+/* Отображение меню навигации */
+ul {
+  list-style-type: none; /*отключается нумерация в упорядоченном списке*/
+  overflow: hidden; /*содержимое, выходящее за пределы блока элемента, будет скрыто*/
+  background-color: #ccccff; /*цвет фона ячейки*/
+  width: 99%; /*ширина*/
+  top: 0;/*цепляет вверху*/
+  position: fixed; /*фиксация*/
+  z-index: 2;
+  margin: 0;
+  padding: 0;
+}
+
+
+li a { /*Навигационные ячейки*/
+  display: block; /*блочный дисплей*/
+  float: left;
+  font-size: 1.4em;
+  font-family: "Mulish", sans-serif;
+  font-weight: 900;
+  padding: 15px 13.42%; /*13.4501%;*/
+  text-decoration: none; /* убирает подчеркивание текста при ссылке*/
+  border: 5px solid #c0c0f0;
+}
+
+li a:hover { /*ячейка, на которую наведен курсор*/
+  background-color: #c0c0f0; /*цвет ячейки*/
+}
+
+li a:active {
+  color: #fff0f0;
+}
+
+/* Настройки для таблиц */
+table {
+  margin: auto;
+  padding: 1em;
+  width: 50%;
+}
+
+tr, td {
+  border: 5px solid #ccccff;
+  padding: 0 1em;
+  border-radius: 1%;
+}
+
+td:last-child {
+  border-radius: 1% 5% 5% 1%;
+}
+
+td:first-child {
+  border-radius: 5% 1% 1% 5%;
+}
