@@ -1,6 +1,6 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" import="com.javaee.sushiee.dao.Person" %>
-<%@ page import="com.javaee.sushiee.HelloServlet" %>
-<jsp:useBean id="formBean" scope="request" class="com.javaee.sushiee.dao.Person"/>
+<%@ page contentType="text/html;charset=UTF-8" language="java" import="com.javaee.sushiee.model.Person" %>
+<%@ page import="com.javaee.sushiee.servlet.PersonServlet" %>
+<jsp:useBean id="Person" scope="request" class="com.javaee.sushiee.model.Person"/>
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
@@ -12,19 +12,17 @@
     <title>Facelet Title</title>
 </h:head>
 <h:body>
-    <FORM method="post" action="${pageContext.request.contextPath}/hello-servlet">
+    <FORM method="post" action="${pageContext.request.contextPath}/PersonServlet">
         <P>Hi - Welcome to the Portal<BR>Please Login
         </P>
         <P><BR>User ID
-            : <INPUT TYPE=TEXT name=userID size = 20 >
-            <jsp:setProperty name="formBean"
-                             property="name"
-                             param="userID" />
+            : <INPUT TYPE=TEXT name=userName size = 20 >
+            <jsp:setProperty name="Person"
+                             property="name"/>
             <BR>Password
-            : <INPUT TYPE=PASSWORD name=password size = 20><BR>
-            <jsp:setProperty name="formBean"
-                             property="phoneNumber"
-                             param="password" />
+            : <INPUT TYPE=TEXT name=phoneNumber size = 20><BR>
+            <jsp:setProperty name="Person"
+                             property="phoneNumber"/>
             <BR>
             <INPUT type="submit" name="login" value="Login">
             <BR>

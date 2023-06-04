@@ -1,14 +1,13 @@
-package com.javaee.sushiee;
+package com.javaee.sushiee.servlet;
 
 import java.io.*;
 
-import com.javaee.sushiee.dao.Person;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 
-@WebServlet(name = "helloServlet", value = "/hello-servlet")
-public class HelloServlet extends HttpServlet {
+@WebServlet(name = "PersonServlet", value = "/PersonServlet")
+public class PersonServlet extends HttpServlet {
     private String message;
 
     public void init() {
@@ -28,16 +27,13 @@ public class HelloServlet extends HttpServlet {
 
         RequestDispatcher rd = null;
         HttpSession userSession = null;
-        Person person = new Person();
 
-//String userID=req.getParameter("userID");
-//String password=req.getParameter("password");
+        String userName = req.getParameter("userName");
+        long phoneNumber = Long.parseLong(req.getParameter("phoneNumber"));
 
-        String userName = person.getName();
-        long userPhoneNumber = person.getPhoneNumber();
+        System.out.println(userName);
+        System.out.println(phoneNumber);
 
-        System.out.println("userName=" + userName);
-        System.out.println("userPhoneNumber=" + userPhoneNumber);
 
 
     }
