@@ -21,6 +21,7 @@
     <li><a href="${pageContext.request.contextPath}/index.jsp">Главная</a></li>
     <li><a href="MenuPage.jsp">Меню</a></li>
     <li><a href="PromoPage.jsp" style="padding-right: 5%">Скидки</a></li>
+    <li><a href="RegistrationPage.jsp">Регистрация</a></li>
     <li>
       <a style="padding-right: 1%;padding-left: 1%;border-right: 0;" id = "cart" onclick="addProducts();openOrderWindow();"> 0 </a><!--Смещение внутри элемента паддинг лефт райт-->
     </li>
