@@ -1,40 +1,45 @@
 package com.javaee.sushiee.servlet;
 
-import java.io.*;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
-import jakarta.servlet.RequestDispatcher;
-import jakarta.servlet.http.*;
-import jakarta.servlet.annotation.*;
+import java.io.IOException;
+import java.io.PrintWriter;
 
-@WebServlet(name = "PersonServlet", value = "/PersonServlet")
+@WebServlet(value = "/person")
 public class PersonServlet extends HttpServlet {
     private String message;
 
     public void init() {
-        message = "Hello World!";
+        message = "Hello Bebra!";
     }
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("text/html");
-        // Hello
         PrintWriter out = response.getWriter();
         out.println("<html><body>");
         out.println("<h1>" + message + "</h1>");
         out.println("</body></html>");
     }
 
-    public void doPost(HttpServletRequest req, HttpServletResponse resp) {
+    public void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 
-        RequestDispatcher rd = null;
-        HttpSession userSession = null;
+        String surname = req.getParameter("userSurname");
+        String name = req.getParameter("userName");
+        long phoneNumber = Long.parseLong(req.getParameter("userPhoneNumber"));
+        String email = req.getParameter("userEmail");
 
-        String userName = req.getParameter("userName");
-        long phoneNumber = Long.parseLong(req.getParameter("phoneNumber"));
-
-        System.out.println(userName);
-        System.out.println(phoneNumber);
-
-
+        req.getRequestDispatcher("/view/MenuPage.jsp").forward(req,resp);
+//        PrintWriter writer = resp.getWriter();
+//        writer.println("<html><body>");
+//        writer.println("<p>Фамилия: " + surname);
+//        writer.println("<p>Имя: " + name);
+//        writer.println("<p>Номер телефона: " + phoneNumber);
+//        writer.println("<p>Email: " + email);
+//        writer.println("</body></html>");
 
     }
 
