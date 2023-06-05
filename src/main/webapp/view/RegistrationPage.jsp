@@ -12,8 +12,16 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/mystyle.css"/>
 </head>
 <body>
-<%int a = 20;%>
-<%= a%>
+<nav>
+    <table class="navpanel">
+        <tr>
+            <td><a href="index.jsp" class="navtext">Главная</a></td>
+            <td><a href="MenuPage.jsp" class="navtext">Меню</a></td>
+            <td><a href="PromoPage.jsp"  class="navtext">Скидки</a></td>
+            <td><a href="RegistrationPage.jsp"  class="navtext">Регистрация</a></td>
+        </tr>
+    </table>
+</nav>
 <FORM method="post" action="${pageContext.request.contextPath}/person">
     <p>Добро пожаловать на портал.
         <br>Регистрация

@@ -15,13 +15,15 @@
     <h1>Фудзи-Суши</h1>
     <img src="${pageContext.request.contextPath}/icon.png" alt="Логотип" class="logo">
 </header>
-<nav> <!--Навигация страницы-->
-    <ul>
-        <li><a href="index.jsp">Главная</a></li>
-        <li><a href="MenuPage.jsp">Меню</a></li>
-        <li><a href="PromoPage.jsp">Скидки</a></li>
-        <li><a href="RegistrationPage.jsp">Регистрация</a></li>
-    </ul>
+<nav>
+    <table class="navpanel">
+        <tr>
+            <td><a href="index.jsp" class="navtext">Главная</a></td>
+            <td><a href="MenuPage.jsp" class="navtext">Меню</a></td>
+            <td><a href="PromoPage.jsp"  class="navtext">Скидки</a></td>
+            <td><a href="RegistrationPage.jsp"  class="navtext">Регистрация</a></td>
+        </tr>
+    </table>
 </nav>
 <section>
     <h1>Скидки</h1>

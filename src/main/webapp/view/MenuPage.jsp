@@ -17,19 +17,14 @@
 </header>
 
 <nav>
-  <ul>
-    <li><a href="index.jsp">Главная</a></li>
-    <li><a href="MenuPage.jsp">Меню</a></li>
-    <li><a href="PromoPage.jsp" style="padding-right: 5%">Скидки</a></li>
-    <li><a href="RegistrationPage.jsp">Регистрация</a></li>
-    <li>
-      <a style="padding-right: 1%;padding-left: 1%;border-right: 0;" id = "cart" onclick="addProducts();openOrderWindow();"> 0 </a><!--Смещение внутри элемента паддинг лефт райт-->
-    </li>
-    <li>
-      <a style="padding-right: 1%;padding-left: 1%;border-left: 0;" onclick="addProducts();openOrderWindow();">
-        <img src="${pageContext.request.contextPath}/img/корзина.png" alt="КОРЗИНА" style="height:30px;width:30px;"></a>
-    </li>
-  </ul>
+  <table class="navpanel">
+    <tr>
+      <td><a href="index.jsp" class="navtext">Главная</a></td>
+      <td><a href="MenuPage.jsp" class="navtext">Меню</a></td>
+      <td><a href="PromoPage.jsp"  class="navtext">Скидки</a></td>
+      <td><a href="RegistrationPage.jsp"  class="navtext">Регистрация</a></td>
+    </tr>
+  </table>
 </nav>
 <section>
   <h1> Суши</h1>

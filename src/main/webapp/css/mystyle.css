@@ -99,37 +99,20 @@ input[type="email"] {
   font-size: 21px;
 }
 
-/* Отображение меню навигации */
-ul {
-  list-style-type: none; /*отключается нумерация в упорядоченном списке*/
-  overflow: hidden; /*содержимое, выходящее за пределы блока элемента, будет скрыто*/
-  background-color: #ccccff; /*цвет фона ячейки*/
-  width: 99%; /*ширина*/
-  top: 0;/*цепляет вверху*/
+.navpanel {
+  float: left;
+  top: 0;
   position: fixed; /*фиксация*/
   z-index: 2;
-  margin: 0;
-  padding: 0;
-}
-
-
-li a { /*Навигационные ячейки*/
-  display: block; /*блочный дисплей*/
-  float: left;
-  font-size: 1.4em;
-  font-family: "Mulish", sans-serif;
-  font-weight: 900;
-  padding: 15px 13.42%; /*13.4501%;*/
-  text-decoration: none; /* убирает подчеркивание текста при ссылке*/
+  width:  99%;
+  background-color: #fff0f0;
   border: 5px solid #c0c0f0;
 }
-
-li a:hover { /*ячейка, на которую наведен курсор*/
-  background-color: #c0c0f0; /*цвет ячейки*/
-}
-
-li a:active {
-  color: #fff0f0;
+.navtext {
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 2em;
+  color: #c0c0f0;
 }
 
 /* Настройки для таблиц */

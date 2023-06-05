@@ -16,12 +16,14 @@
 </header>
 
 <nav>
-  <ul>
-    <li><a href="index.jsp">Главная</a></li><!--Список который кликлабельный-->
-    <li><a href="MenuPage.jsp">Меню</a></li>
-    <li><a href="PromoPage.jsp">Скидки</a></li>
-      <li><a href="RegistrationPage.jsp">Регистрация</a></li>
-  </ul>
+    <table class="navpanel">
+        <tr>
+            <td><a href="index.jsp" class="navtext">Главная</a></td>
+            <td><a href="MenuPage.jsp" class="navtext">Меню</a></td>
+            <td><a href="PromoPage.jsp"  class="navtext">Скидки</a></td>
+            <td><a href="RegistrationPage.jsp"  class="navtext">Регистрация</a></td>
+        </tr>
+    </table>
 </nav>
 
 <section>
