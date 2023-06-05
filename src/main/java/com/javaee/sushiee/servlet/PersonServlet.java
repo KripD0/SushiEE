@@ -11,17 +11,11 @@ import java.io.PrintWriter;
 
 @WebServlet(value = "/person")
 public class PersonServlet extends HttpServlet {
-    private String message;
-
-    public void init() {
-        message = "Hello Bebra!";
-    }
-
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
         out.println("<html><body>");
-        out.println("<h1>" + message + "</h1>");
+        out.println("<h1> Hello Bebra! /h1>");
         out.println("</body></html>");
     }
 
@@ -41,9 +35,5 @@ public class PersonServlet extends HttpServlet {
 //        writer.println("<p>Email: " + email);
 //        writer.println("</body></html>");
 
-    }
-
-
-    public void destroy() {
     }
 }

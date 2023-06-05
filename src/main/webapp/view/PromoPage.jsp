@@ -17,7 +17,7 @@
 </header>
 <nav> <!--Навигация страницы-->
     <ul>
-        <li><a href="${pageContext.request.contextPath}/index.jsp">Главная</a></li>
+        <li><a href="index.jsp">Главная</a></li>
         <li><a href="MenuPage.jsp">Меню</a></li>
         <li><a href="PromoPage.jsp">Скидки</a></li>
         <li><a href="RegistrationPage.jsp">Регистрация</a></li>

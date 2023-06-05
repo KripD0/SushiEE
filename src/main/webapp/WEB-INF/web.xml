@@ -9,6 +9,15 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>MenuServlet</servlet-name>
-        <url-pattern>/MenuPage</url-pattern>
+        <url-pattern>/view/index.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SamaraJSP</servlet-name>
+        <jsp-file>/view/index.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SamaraJSP</servlet-name>
+        <url-pattern>/view/bebra</url-pattern>
     </servlet-mapping>
 </web-app>

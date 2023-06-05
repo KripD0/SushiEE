@@ -18,7 +18,7 @@
 
 <nav>
   <ul>
-    <li><a href="${pageContext.request.contextPath}/index.jsp">Главная</a></li>
+    <li><a href="index.jsp">Главная</a></li>
     <li><a href="MenuPage.jsp">Меню</a></li>
     <li><a href="PromoPage.jsp" style="padding-right: 5%">Скидки</a></li>
     <li><a href="RegistrationPage.jsp">Регистрация</a></li>

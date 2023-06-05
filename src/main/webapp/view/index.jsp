@@ -4,29 +4,29 @@
 <head>
   <meta charset="utf-8">
   <title>Фудзи-Суши: Главная</title>
-  <link rel="icon" href="icon.png"/>
-  <link rel="stylesheet" href="css/mystyle.css"/>
+  <link rel="icon" href="../icon.png"/>
+  <link rel="stylesheet" href="../css/mystyle.css"/>
 </head>
 
 <body>
 
 <header>
   <h1>Фудзи-Суши</h1>
-  <img src="icon.png" alt="Логотип" class="logo">
+  <img src="../icon.png" alt="Логотип" class="logo">
 </header>
 
 <nav>
   <ul>
     <li><a href="index.jsp">Главная</a></li><!--Список который кликлабельный-->
-    <li><a href="view/MenuPage.jsp">Меню</a></li>
-    <li><a href="view/PromoPage.jsp">Скидки</a></li>
-      <li><a href="view/RegistrationPage.jsp">Регистрация</a></li>
+    <li><a href="MenuPage.jsp">Меню</a></li>
+    <li><a href="PromoPage.jsp">Скидки</a></li>
+      <li><a href="RegistrationPage.jsp">Регистрация</a></li>
   </ul>
 </nav>
 
 <section>
   <br><!--Для группировки элементов-->
-   <img src="img/ПОСТЕР.png" alt="ПОСТЕР" style="border-radius: 1%; width: 70%">
+   <img src="../img/ПОСТЕР.png" alt="ПОСТЕР" style="border-radius: 1%; width: 70%">
    <article>
    <h1>О нас:</h1>
     Наше заведение предлагает нашим гостям не только высококачественную японскую кухню, но и приятную атмосферу и множество удобств.
@@ -121,11 +121,11 @@
   </article>
   <article style="font-size: 1.5em">
     <h1>Наши соцсети:</h1>
-    ВКонтакте: <a href="https://vk.com"><img src="img/ВК_ИКОНКА.png" alt="ВК" class="networks"></a><br>
-    Telegram: <a href="https://t.me"><img src="img/ТЕЛЕГРАММ_ИКОНКА.png" alt="ТЕЛЕГРАММ" class="networks"></a><br>
-    Дзен: <a href="https://dzen.ru"><img src="img/ДЗЕН_ИКОНКА.png" alt="ДЗЕН" class="networks"></a><br>
-    Instagram: <a href="https://www.instagram.com"><img src="img/ИНСТАГРАМ_ИКОНКА.png" alt="ИНСТАГРАМ" class="networks"></a><br>
-    YouTube: <a href="https://www.youtube.com"><img src="img/ЮТУБ_ИКОНКА.png" alt="ЮТУБ" class="networks"></a><br>
+    ВКонтакте: <a href="https://vk.com"><img src="../img/ВК_ИКОНКА.png" alt="ВК" class="networks"></a><br>
+    Telegram: <a href="https://t.me"><img src="../img/ТЕЛЕГРАММ_ИКОНКА.png" alt="ТЕЛЕГРАММ" class="networks"></a><br>
+    Дзен: <a href="https://dzen.ru"><img src="../img/ДЗЕН_ИКОНКА.png" alt="ДЗЕН" class="networks"></a><br>
+    Instagram: <a href="https://www.instagram.com"><img src="../img/ИНСТАГРАМ_ИКОНКА.png" alt="ИНСТАГРАМ" class="networks"></a><br>
+    YouTube: <a href="https://www.youtube.com"><img src="../img/ЮТУБ_ИКОНКА.png" alt="ЮТУБ" class="networks"></a><br>
   </article>
 </section>
 <section>
@@ -162,13 +162,13 @@
         В меню пополнение! Сет "ИНТЕРЕСНЫЙ" создан для тех, кто любит разнообразие,
         каждый из роллов будет иметь свой собственный вкусовой оттенок!
         <br>
-        <img src="img/8 СЕТ ИНТЕРЕСНЫЙ .png" alt="СЕТ ИНТЕРЕСНЫЙ">
+        <img src="../img/8%20СЕТ%20ИНТЕРЕСНЫЙ%20.png" alt="СЕТ ИНТЕРЕСНЫЙ">
       </td>
       <td>
         Мы теперь в Instagram! А вместе с новыми контактами подоспела и новая акция,
         которая снизит цену вашего следующего заказа на 5%! Условия находятся в "Скидках"!
         <br>
-        <img src="img/Инстаграм.png" alt="ИНСТРАГРАМ">
+        <img src="../img/Инстаграм.png" alt="ИНСТРАГРАМ">
       </td>
     </tr>
   </table>
