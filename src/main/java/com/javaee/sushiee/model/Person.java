@@ -13,8 +13,10 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Person {
 
+    private int id;
     private String surname;
     private String name;
     private long phoneNumber;
     private String email;
+    private String password;
 }

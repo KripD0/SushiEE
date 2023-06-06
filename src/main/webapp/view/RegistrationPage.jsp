@@ -2,21 +2,22 @@
 <jsp:useBean id="Person" scope="request" class="com.javaee.sushiee.model.Person"/>
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
->
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <% String theme = null;
-        String linkCSS = null;
+    <% String theme = "peach";
+        String linkCSS;
         Cookie[] cookie = request.getCookies();
-        for (Cookie cook : cookie) {
-            if (cook.getName().equals("theme")) {
-                theme = cook.getValue();
+        if(cookie != null){
+            for (Cookie cook : cookie) {
+                if (cook.getName().equals("theme")) {
+                    theme = cook.getValue();
+                }
             }
         }
         if (theme.equals("peach")) {
-            linkCSS = "../css/darkstyle.css";
-        } else {
             linkCSS = "../css/mystyle.css";
+        } else {
+            linkCSS = "../css/darkstyle.css";
         }%>
     <title>Вход в личный кабинет</title>
     <link rel="stylesheet" href="<%=linkCSS%>"/>
@@ -32,7 +33,7 @@
             <td class="noborder"><a href="/FuJEE" class="navtext">Главная</a></td>
             <td class="noborder"><a href="/FuJEE/menu" class="navtext">Меню</a></td>
             <td class="noborder"><a href="/FuJEE/promo" class="navtext">Скидки</a></td>
-            <td class="noborder"><a href="/FuJEE/registration" class="navtext">Личный кабинет</a></td>
+            <td class="noborder"><a href="/FuJEE/account" class="navtext">Личный кабинет</a></td>
         </tr>
     </table>
 </nav>
@@ -72,6 +73,15 @@
             <td class="noborder" style="text-align: left;">
                 <label>
                     <input type="text" name=userEmail placeholder="myemail@site.com">
+                </label>
+            </td>
+        </tr>
+        <tr class="noborder">
+            <td class="noborder" style="text-align: right;">Password:
+            </td>
+            <td class="noborder" style="text-align: left;">
+                <label>
+                    <input type="text" name=userPassword placeholder="******">
                 </label>
             </td>
         </tr>

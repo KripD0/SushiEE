@@ -2,18 +2,20 @@
 <!doctype html>
 <html lang="ru" xmlns="http://www.w3.org/1999/html">
 <head>
-    <% String theme = null;
-        String linkCSS = null;
+    <% String theme = "peach";
+        String linkCSS;
         Cookie[] cookie = request.getCookies();
-        for (Cookie cook : cookie) {
-            if (cook.getName().equals("theme")) {
-                theme = cook.getValue();
+        if(cookie != null){
+            for (Cookie cook : cookie) {
+                if (cook.getName().equals("theme")) {
+                    theme = cook.getValue();
+                }
             }
         }
         if (theme.equals("peach")) {
-            linkCSS = "../css/darkstyle.css";
-        } else {
             linkCSS = "../css/mystyle.css";
+        } else {
+            linkCSS = "../css/darkstyle.css";
         }%>
     <meta charset="utf-8">
     <title>Фудзи-Суши: Скидки</title>
@@ -34,7 +36,7 @@
             <td class="noborder"><a href="/FuJEE" class="navtext">Главная</a></td>
             <td class="noborder"><a href="/FuJEE/menu" class="navtext">Меню</a></td>
             <td class="noborder"><a href="/FuJEE/promo" class="navtext">Скидки</a></td>
-            <td class="noborder"><a href="/FuJEE/registration" class="navtext">Личный кабинет</a></td>
+            <td class="noborder"><a href="/FuJEE/account" class="navtext">Личный кабинет</a></td>
         </tr>
     </table>
 </nav>
