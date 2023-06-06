@@ -12,7 +12,7 @@ target/
 *.iml
 *.ipr
 .idea
-
+src/main/java/com/javaee/sushiee/config/SpringConfig.java
 ### Eclipse ###
 .apt_generated
 .classpath

@@ -1,13 +1,13 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <jsp:useBean id="Person" scope="request" class="com.javaee.sushiee.model.Person"/>
 <?xml version='1.0' encoding='UTF-8' ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
     <% String theme = "peach";
         String linkCSS;
         Cookie[] cookie = request.getCookies();
-        if(cookie != null){
+        if (cookie != null) {
             for (Cookie cook : cookie) {
                 if (cook.getName().equals("theme")) {
                     theme = cook.getValue();
@@ -21,6 +21,7 @@
         }%>
     <title>Вход в личный кабинет</title>
     <link rel="stylesheet" href="<%=linkCSS%>"/>
+    <script src="${pageContext.request.contextPath}/js/emailPromo.js"></script>
 </head>
 <body>
 <header>
@@ -37,9 +38,37 @@
         </tr>
     </table>
 </nav>
-<FORM method="post" action="/FuJEE/registration">
-    <h1>Авторизация:
-    </h1>
+<form method="put" action="/FuJEE/registration">
+    <h1>Авторизация:</h1>
+    <table class="noborder">
+        <tr class="noborder">
+            <td class="noborder" style="text-align: right;">Email:
+            </td>
+            <td class="noborder" style="text-align: left;">
+                <label>
+                    <input type="text" name=userEmail placeholder="myemail@site.com" id="emailFiel2" required>
+                </label>
+            </td>
+        </tr>
+        <tr class="noborder">
+            <td class="noborder" style="text-align: right;">&nbsp;&nbsp;&nbsp;Пароль:
+            </td>
+            <td class="noborder" style="text-align: left;">
+                <label>
+                    <input type="text" name=userPassword placeholder="******">
+                </label>
+            </td>
+        </tr>
+        <tr class="noborder">
+            <td colspan="2" class="noborder ">
+                <input type="submit" name="registration" value="Авторизироваться" style="width: 60%; height: 10%"
+                       onclick="checkEmail(emailField2)">
+            </td>
+        </tr>
+    </table>
+    <h1>Регистрация:</h1>
+</form>
+<form method="post" action="/FuJEE/registration">
     <table class="noborder">
         <tr class="noborder">
             <td class="noborder" style="text-align: right;">Фамилия:</td>
@@ -59,7 +88,7 @@
             </td>
         </tr>
         <tr class="noborder">
-            <td class="noborder" style="text-align: right;">Номер телефона:
+            <td class="noborder" style="text-align: right;">Телефон:
             </td>
             <td class="noborder" style="text-align: left;">
                 <label>
@@ -72,12 +101,12 @@
             </td>
             <td class="noborder" style="text-align: left;">
                 <label>
-                    <input type="text" name=userEmail placeholder="myemail@site.com">
+                    <input type="text" name=userEmail placeholder="myemail@site.com" id="emailField" required>
                 </label>
             </td>
         </tr>
         <tr class="noborder">
-            <td class="noborder" style="text-align: right;">Password:
+            <td class="noborder" style="text-align: right;">Пароль:
             </td>
             <td class="noborder" style="text-align: left;">
                 <label>
@@ -87,10 +116,11 @@
         </tr>
         <tr class="noborder">
             <td colspan="2" class="noborder ">
-                <input type="submit" name="registration" value="Авторизоваться" style="width: 50%; height: 10%">
+                <input type="submit" name="registration" value="Зарегистрироваться" style="width: 70%; height: 10%"
+                       onclick="checkEmail(emailField)">
             </td>
         </tr>
     </table>
-</FORM>
+</form>
 </body>
 </html>
