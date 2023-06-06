@@ -12,8 +12,8 @@
 <body>
 
 <header>
-    <h1>Фудзи-Суши</h1>
-    <img src="${pageContext.request.contextPath}/icon.png" alt="Логотип" class="logo">
+    <h1 style="padding-top: 4%">Фудзи-Суши</h1>
+    <img src="../icon.png" alt="Логотип" class="logo">
 </header>
 <nav>
     <table class="navpanel">
