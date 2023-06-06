@@ -76,7 +76,7 @@
 <section style="border:  5px dashed #ccccff; border-radius: 0;">
     <h3>Введите свою почту и получите промокод на скидку при втором заказе: </h3>
     <label>
-        <input type="email" id="emailField" placeholder="myemail@site.com"/>
+        <input type="text" id="emailField" placeholder="myemail@site.com"/>
     </label>
     <input type="button" onclick="checkEmail(emailField);" value="Получить" style="width: 200px; height: 100px"/>
 </section>

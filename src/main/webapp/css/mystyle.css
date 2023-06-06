@@ -89,7 +89,7 @@ header {
 }
 
 
-input[type="email"] {
+input[type="text"] {
   border-radius: 1%;
   border: 5px solid #ccccff;
   width: 420px;
@@ -113,6 +113,11 @@ input[type="email"] {
   font-weight: 900;
   font-size: 2em;
   color: #c0c0f0;
+}
+.noborder {
+  border: 0;
+  padding: 0;
+  font-size: 35px;
 }
 
 /* Настройки для таблиц */

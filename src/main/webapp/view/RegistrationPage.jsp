@@ -21,36 +21,56 @@
         <tr>
             <td><a href="index.jsp" class="navtext">Главная</a></td>
             <td><a href="MenuPage.jsp" class="navtext">Меню</a></td>
-            <td><a href="PromoPage.jsp"  class="navtext">Скидки</a></td>
-            <td><a href="RegistrationPage.jsp"  class="navtext">Регистрация</a></td>
+            <td><a href="PromoPage.jsp" class="navtext">Скидки</a></td>
+            <td><a href="RegistrationPage.jsp" class="navtext">Регистрация</a></td>
         </tr>
     </table>
 </nav>
 <FORM method="post" action="${pageContext.request.contextPath}/person">
-    <p>Добро пожаловать на портал.
-        <br>Регистрация
-    </p>
-    <p>
-        <br>Фамилия:
-        <label>
-            <input type="text" name=userSurname>
-        </label>
-        <br>Имя:
-        <label>
-            <input type="text" name=userName>
-        </label>
-        <br>Номер телефона:
-        <label>
-            <input type="text" name=userPhoneNumber>
-        </label>
-        <br>Email:
-        <label>
-            <input type="text" name=userEmail>
-        </label>
-        <br>
-        <br><input type="submit" name="registration" value="Зарегистрироваться">
-        <br>
-    </p>
+    <h1>Регистрация:
+    </h1>
+    <table class="noborder">
+        <tr class="noborder" >
+            <td class="noborder" style="text-align: right;">Фамилия:</td>
+            <td class="noborder" style="text-align: left;">
+                <label>
+                    <input type="text" name=userSurname>
+                </label>
+            </td>
+        </tr>
+        <tr class="noborder">
+            <td class="noborder" style="text-align: right;">Имя:
+            </td>
+            <td class="noborder" style="text-align: left;">
+                <label>
+                    <input type="text" name=userName>
+                </label>
+            </td>
+        </tr>
+        <tr class="noborder">
+            <td class="noborder" style="text-align: right;">Номер телефона:
+            </td>
+            <td class="noborder" style="text-align: left;">
+                <label>
+                    <input type="text" name=userPhoneNumber>
+                </label>
+            </td>
+        </tr>
+        <tr class="noborder">
+            <td class="noborder" style="text-align: right;">Email:
+            </td>
+            <td class="noborder" style="text-align: left;">
+                <label>
+                    <input type="text" name=userEmail>
+                </label>
+            </td>
+        </tr>
+        <tr class="noborder">
+            <td colspan="2"  class="noborder ">
+                <input type="button" name="registration" value="Зарегистрироваться" style="width: 50%; height: 10%">
+            </td>
+        </tr>
+    </table>
 </FORM>
 </body>
 </html>
