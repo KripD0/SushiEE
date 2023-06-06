@@ -25,16 +25,16 @@
 <body>
 
 <header>
-    <h1 style="padding-top: 4%">Фудзи-Суши</h1>
     <img src="../icon.png" alt="Логотип" class="logo">
+    <h1>Фудзи-Суши</h1>
 </header>
 <nav>
-    <table class="navpanel">
-        <tr>
-            <td><a href="/FuJEE" class="navtext">Главная</a></td>
-            <td><a href="/FuJEE/menu" class="navtext">Меню</a></td>
-            <td><a href="/FuJEE/promo"  class="navtext">Скидки</a></td>
-            <td><a href="/FuJEE/registration"  class="navtext">Личный кабинет</a></td>
+    <table style="width: 99%;" class="navpanel">
+        <tr class="noborder">
+            <td class="noborder"><a href="/FuJEE" class="navtext">Главная</a></td>
+            <td class="noborder"><a href="/FuJEE/menu" class="navtext">Меню</a></td>
+            <td class="noborder"><a href="/FuJEE/promo" class="navtext">Скидки</a></td>
+            <td class="noborder"><a href="/FuJEE/registration" class="navtext">Личный кабинет</a></td>
         </tr>
     </table>
 </nav>
@@ -75,7 +75,8 @@
                 <h1>Закажите для доставки легендарную тройку из васаби, имбиря и соуса за <s>110₽</s> 88₽!</h1>
             </td>
             <td>
-                <img src="${pageContext.request.contextPath}/img/08%20ПАК%20С%20ИНЬЯНЕМ.png" alt="СЕТ ИНЬ-ЯНЬ КОЛА СОУС И ИМБИРЬ">
+                <img src="${pageContext.request.contextPath}/img/08%20ПАК%20С%20ИНЬЯНЕМ.png"
+                     alt="СЕТ ИНЬ-ЯНЬ КОЛА СОУС И ИМБИРЬ">
                 <h1>КОМБО: Сет "Инь-янь" в комплекте с соевым соусом, имбирём и колой — <s>914₽</s> 800₽!</h1>
             </td>
             <td>

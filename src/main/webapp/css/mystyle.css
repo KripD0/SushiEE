@@ -1,156 +1,174 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;700;900&display=swap');
 
 /*
-#ccffff - regular
+#ccccff - regular
 #c0c0f0 - darker (border)
 #fff0f0 - peach, for sections
+#f0f033 - dark text
 */
+
 img {
-  vertical-align: center;
-  horiz-align: center;
-  border-radius: 10px;
-  width: 300px;
+    vertical-align: center;
+    horiz-align: center;
+    border-radius: 10px;
+    width: 300px;
 }
 
 .logo {
-  width: 10%;
+    margin-top: 4%;
+    width: 12%;
 }
 
 .networks {
-  width: 1%;
-  height: 1%;
+    width: 2%;
+    height: 2%;
 }
 
 footer {
-  background-color: #ccccff;
-  padding: 15px;
+    background-color: #fff0f0;
+    padding: 1%;
 }
 
 h1, h2 {
-  font-weight: 900;
-  margin: 0.5em;
+    font-weight: 900;
+    margin: 0.5em;
 }
 
 h3, h4, h5, h6 {
-  font-weight: 500;
-  margin: 0.5em 0 0 0;
+    font-weight: 500;
+    margin: 0.5em 0 0 0;
 }
 
 article {
-  width: 60%;
-  margin: 1em auto; /*Отсуп за границу - для артИкла, auto центрирует по середине*/
+    width: 60%;
+    margin: 1em auto; /*Отсуп за границу - для артИкла, auto центрирует по середине*/
+    background-color: #fff0f0; /*цвет фона*/
 }
 
 span {
-  font-weight: 700;
-  font-size: 1.8em;
-}
-
-section {
-  margin-bottom: 1%;
-  background-color: #fff0f0;
-  border: 5px solid #ccccff;
-  border-radius: 5%;
+    font-weight: 700;
+    font-size: 1.8em;
 }
 
 body {
-  background-color: #fff0f0; /*цвет фона*/
-  font-family: "Mulish", sans-serif;
-  font-size: 21px;
-  text-align: center;
+    background-color: #fff0f0; /*цвет фона*/
+    color: #404080; /*цвет текста*/
+    font-family: "Mulish", sans-serif;
+    font-size: 1em;
+    text-align: center;
 }
 
+footer {
+    background-color: #fff0f0; /*цвет фона*/
+}
+
+section {
+    margin-bottom: 1%;
+    background-color: #fff0f0; /*цвет фона*/
+    border: 5px solid #ccccff;
+    border-radius: 5%;
+}
+
+input[type="image"] {
+    height: 5em;
+}
 
 input[type="button"] {
-  background-color: #ccccff;
-  border-radius: 22px;
-  border: 5px solid #c0c0f0;
-  width: 55px;
-  height: 55px;
-  font-weight: 700;
-  cursor: pointer;
-  margin: 2%;
-  font-family: "Mulish", sans-serif;
-  font-size: 1.5em;
-  text-align: center;
+    background-color: #fff0f0; /*цвет фона*/
+    color: #404080; /*цвет текста*/
+    border-radius: 22px;
+    border: 5px solid #c0c0f0;
+    width: 55px;
+    height: 55px;
+    font-weight: 700;
+    cursor: pointer;
+    margin: 2%;
+    font-family: "Mulish", sans-serif;
+    font-size: 1.5em;
+    text-align: center;
 }
 
 input[type="submit"] {
-  background-color: #ccccff;
-  border-radius: 22px;
-  border: 5px solid #c0c0f0;
-  width: 55px;
-  height: 55px;
-  font-weight: 700;
-  cursor: pointer;
-  margin: 2%;
-  font-family: "Mulish", sans-serif;
-  font-size: 1.5em;
-  text-align: center;
+    background-color: #fff0f0; /*цвет фона*/
+    color: #404080; /*цвет текста*/
+    border: 5px solid #c0c0f0;
+    border-radius: 22px;
+    width: 55px;
+    height: 55px;
+    font-weight: 700;
+    cursor: pointer;
+    margin: 2%;
+    font-family: "Mulish", sans-serif;
+    font-size: 1.5em;
+    text-align: center;
 }
-
-input[type="button"]:hover {
-  background-color: #c0c0f0; /*цвет ячейки*/
-}
-
 
 input[type="button"]:active {
-  color: #fff0f0; /*цвет ячейки*/
+    color: #404080; /*цвет ячейки*/
 }
 
 header {
-  margin-top: 75px;
+    margin-top: 75px;
 }
 
 
 input[type="text"] {
-  border-radius: 1%;
-  border: 5px solid #ccccff;
-  width: 420px;
-  height: 42px;
-  cursor: text;
-  font-family: "Mulish", sans-serif;
-  font-size: 21px;
+    background-color: #fff0f0; /*цвет фона*/
+    color: #404080; /*цвет текста*/
+    border-radius: 1%;
+    border: 5px solid #ccccff;
+    width: 420px;
+    height: 42px;
+    cursor: text;
+    font-family: "Mulish", sans-serif;
+    font-size: 21px;
 }
 
 .navpanel {
-  float: left;
-  top: 0;
-  position: fixed; /*фиксация*/
-  z-index: 2;
-  width:  99%;
-  background-color: #fff0f0;
-  border: 5px solid #c0c0f0;
+    float: left;
+    top: 0;
+    position: fixed; /*фиксация*/
+    z-index: 2;
+    width: 99%;
+    background-color: #fff0f0; /*цвет фона*/
+    border: 5px solid #c0c0f0;
 }
+
 .navtext {
-  text-decoration: none;
-  font-weight: 900;
-  font-size: 2em;
-  color: #c0c0f0;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 1.5em;
+    background-color: #fff0f0; /*цвет фона*/
+    color: #404080; /*цвет текста*/
 }
+
 .noborder {
-  border: 0;
-  padding: 0;
-  font-size: 35px;
+    border: 0;
+    padding: 0;
+    font-size: 35px;
+    background: none; /*цвет фона*/
+    color: #404080; /*цвет текста*/
 }
 
 /* Настройки для таблиц */
 table {
-  margin: auto;
-  padding: 1em;
-  width: 50%;
+    margin: auto;
+    padding: 1em;
+    width: 50%;
+    background-color: #fff0f0; /*цвет фона*/
+    color: #404080; /*цвет текста*/
 }
 
 tr, td {
-  border: 5px solid #ccccff;
-  padding: 0 1em;
-  border-radius: 1%;
+    border: 5px solid #ccccff;
+    padding: 0 1em;
+    border-radius: 1%;
 }
 
 td:last-child {
-  border-radius: 1% 5% 5% 1%;
+    border-radius: 1% 5% 5% 1%;
 }
 
 td:first-child {
-  border-radius: 5% 1% 1% 5%;
+    border-radius: 5% 1% 1% 5%;
 }

@@ -23,16 +23,16 @@
 </head>
 <body>
 <header>
-    <h1 style="padding-top: 4%">Фудзи-Суши</h1>
     <img src="../icon.png" alt="Логотип" class="logo">
+    <h1>Фудзи-Суши</h1>
 </header>
 <nav>
-    <table class="navpanel">
-        <tr>
-            <td><a href="/FuJEE" class="navtext">Главная</a></td>
-            <td><a href="/FuJEE/menu" class="navtext">Меню</a></td>
-            <td><a href="/FuJEE/promo"  class="navtext">Скидки</a></td>
-            <td><a href="/FuJEE/registration"  class="navtext">Личный кабинет</a></td>
+    <table style="width: 99%;" class="navpanel">
+        <tr class="noborder">
+            <td class="noborder"><a href="/FuJEE" class="navtext">Главная</a></td>
+            <td class="noborder"><a href="/FuJEE/menu" class="navtext">Меню</a></td>
+            <td class="noborder"><a href="/FuJEE/promo" class="navtext">Скидки</a></td>
+            <td class="noborder"><a href="/FuJEE/registration" class="navtext">Личный кабинет</a></td>
         </tr>
     </table>
 </nav>
@@ -40,7 +40,7 @@
     <h1>Авторизация:
     </h1>
     <table class="noborder">
-        <tr class="noborder" >
+        <tr class="noborder">
             <td class="noborder" style="text-align: right;">Фамилия:</td>
             <td class="noborder" style="text-align: left;">
                 <label>
@@ -76,7 +76,7 @@
             </td>
         </tr>
         <tr class="noborder">
-            <td colspan="2"  class="noborder ">
+            <td colspan="2" class="noborder ">
                 <input type="submit" name="registration" value="Авторизоваться" style="width: 50%; height: 10%">
             </td>
         </tr>

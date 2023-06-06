@@ -24,23 +24,20 @@
 <body>
 
 <header>
-    <h1 style="padding-top: 4%">Фудзи-Суши</h1>
     <img src="../icon.png" alt="Логотип" class="logo">
+    <h1>Фудзи-Суши</h1>
 </header>
 
 <nav>
-    <table class="navpanel">
-        <tr>
-            <td><a href="/FuJEE" class="navtext">Главная</a></td>
-            <td><a href="/FuJEE/menu" class="navtext">Меню</a></td>
-            <td><a href="/FuJEE/promo" class="navtext">Скидки</a></td>
-            <td><a href="/FuJEE/registration" class="navtext">Личный кабинет</a></td>
-            <td>
+    <table style="width: 99%;" class="navpanel">
+        <tr class="noborder">
+            <td class="noborder"><a href="/FuJEE" class="navtext">Главная</a></td>
+            <td class="noborder"><a href="/FuJEE/menu" class="navtext">Меню</a></td>
+            <td class="noborder"><a href="/FuJEE/promo" class="navtext">Скидки</a></td>
+            <td class="noborder"><a href="/FuJEE/registration" class="navtext">Личный кабинет</a></td>
+            <td class="noborder">
                 <form method="post" action="/FuJEE">
-                    <button type="submit" class="custom-button">
-                        <img src="../img/theme-icon.png" class="networks">
-                    </button>
-                    <%--                    <input type="submit" name="registration" value="Сменить тему" style="width: 50%; height: 10%">--%>
+                    <input type="image" src="../img/theme-icon.png" alt="Смена темы/">
                 </form>
             </td>
         </tr>
