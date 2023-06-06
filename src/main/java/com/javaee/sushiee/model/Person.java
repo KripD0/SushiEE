@@ -17,5 +17,4 @@ public class Person {
     private String name;
     private long phoneNumber;
     private String email;
-
 }

@@ -9,10 +9,10 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
-@WebServlet(value = "/registration")
-public class PersonServlet extends HttpServlet {
+@WebServlet(value = "/FuJEE/registration")
+public class RegistrationServlet extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        request.getRequestDispatcher("view/RegistrationPage.jsp").forward(request, response);
+        request.getRequestDispatcher("/view/RegistrationPage.jsp").forward(request, response);
     }
 
     public void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
