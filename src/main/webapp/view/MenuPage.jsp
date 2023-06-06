@@ -2,10 +2,23 @@
 <!doctype html>
 <html lang="ru">
 <head>
+  <% String theme = null;
+    String linkCSS = null;
+    Cookie[] cookie = request.getCookies();
+    for (Cookie cook : cookie) {
+      if (cook.getName().equals("theme")) {
+        theme = cook.getValue();
+      }
+    }
+    if (theme.equals("peach")) {
+      linkCSS = "../css/darkstyle.css";
+    } else {
+      linkCSS = "../css/mystyle.css";
+    }%>
   <meta charset="utf-8">
   <title>Фудзи-Суши: Меню</title>
   <link rel="icon" href="${pageContext.request.contextPath}/icon.png"/>
-  <link rel="stylesheet" href="${pageContext.request.contextPath}/css/darkstyle.css"/>
+  <link rel="stylesheet" href="<%=linkCSS%>"/>
   <script src="${pageContext.request.contextPath}/js/makeOrder.js"></script> <!--Подкючение джс файла-->
 </head>
 
@@ -19,10 +32,10 @@
 <nav>
   <table class="navpanel">
     <tr>
-      <td><a href="FuJEE" class="navtext">Главная</a></td>
-      <td><a href="FuJEE/menu" class="navtext">Меню</a></td>
-      <td><a href="FuJEE/promo"  class="navtext">Скидки</a></td>
-      <td><a href="FuJEE/registration"  class="navtext">Личный кабинет</a></td>
+      <td><a href="/FuJEE" class="navtext">Главная</a></td>
+      <td><a href="/FuJEE/menu" class="navtext">Меню</a></td>
+      <td><a href="/FuJEE/promo"  class="navtext">Скидки</a></td>
+      <td><a href="/FuJEE/registration"  class="navtext">Личный кабинет</a></td>
     </tr>
   </table>
 </nav>

@@ -11,10 +11,13 @@ import java.io.IOException;
 
 @WebServlet(value = "/FuJEE/registration")
 public class RegistrationServlet extends HttpServlet {
+
+    @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         request.getRequestDispatcher("/view/RegistrationPage.jsp").forward(request, response);
     }
 
+    @Override
     public void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 
         Person person = new Person();

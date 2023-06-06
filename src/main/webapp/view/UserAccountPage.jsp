@@ -5,8 +5,21 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 >
 <head>
+    <% String theme = null;
+        String linkCSS = null;
+        Cookie[] cookie = request.getCookies();
+        for (Cookie cook : cookie) {
+            if (cook.getName().equals("theme")) {
+                theme = cook.getValue();
+            }
+        }
+        if (theme.equals("peach")) {
+            linkCSS = "../css/darkstyle.css";
+        } else {
+            linkCSS = "../css/mystyle.css";
+        }%>
     <title>Регистрация</title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/darkstyle.css"/>
+    <link rel="stylesheet" href="<%=linkCSS%>"/>
 </head>
 <body>
 <header>
@@ -24,7 +37,7 @@
         </tr>
     </table>
 </nav>
-<FORM method="post" action="${pageContext.request.contextPath}/registration">
+<FORM method="post" action="${pageContext.request.contextPath}/FuJEE/registration">
     <%Person person = (Person) request.getAttribute("Person");%>
     <p>Добро пожаловать в личный кабинет!</p>
     <p>Ваши данные для входа: </p>
