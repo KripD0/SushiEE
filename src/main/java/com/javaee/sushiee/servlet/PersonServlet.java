@@ -7,33 +7,21 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 
-@WebServlet(value = "/person")
+@WebServlet(value = "/registration")
 public class PersonServlet extends HttpServlet {
-    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        response.setContentType("text/html");
-        PrintWriter out = response.getWriter();
-        out.println("<html><body>");
-        out.println("<h1> Hello Bebra! /h1>");
-        out.println("</body></html>");
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        request.getRequestDispatcher("view/RegistrationPage.jsp").forward(request, response);
     }
 
     public void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 
-        String surname = req.getParameter("userSurname");
-        String name = req.getParameter("userName");
-        long phoneNumber = Long.parseLong(req.getParameter("userPhoneNumber"));
-        String email = req.getParameter("userEmail");
 
-        req.getRequestDispatcher("/view/MenuPage.jsp").forward(req,resp);
-//        PrintWriter writer = resp.getWriter();
-//        writer.println("<html><body>");
-//        writer.println("<p>Фамилия: " + surname);
-//        writer.println("<p>Имя: " + name);
-//        writer.println("<p>Номер телефона: " + phoneNumber);
-//        writer.println("<p>Email: " + email);
-//        writer.println("</body></html>");
+        req.setAttribute("userSurname", req.getParameter("userSurname"));
+        req.setAttribute("userName", req.getParameter("userName"));
+        req.setAttribute("userPhoneNumber", req.getParameter("userPhoneNumber"));
+        req.setAttribute("userEmail", req.getParameter("userEmail"));
+        req.getRequestDispatcher("/view/UserAccountPage.jsp").forward(req,resp);
 
     }
 }

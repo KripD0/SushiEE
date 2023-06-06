@@ -26,7 +26,7 @@
         </tr>
     </table>
 </nav>
-<FORM method="post" action="${pageContext.request.contextPath}/person">
+<FORM method="post" action="${pageContext.request.contextPath}/registration">
     <h1>Регистрация:
     </h1>
     <table class="noborder">
@@ -67,7 +67,7 @@
         </tr>
         <tr class="noborder">
             <td colspan="2"  class="noborder ">
-                <input type="button" name="registration" value="Зарегистрироваться" style="width: 50%; height: 10%">
+                <input type="submit" name="registration" value="Зарегистрироваться" style="width: 50%; height: 10%">
             </td>
         </tr>
     </table>

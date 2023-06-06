@@ -75,6 +75,20 @@ input[type="button"] {
   text-align: center;
 }
 
+input[type="submit"] {
+  background-color: #ccccff;
+  border-radius: 22px;
+  border: 5px solid #c0c0f0;
+  width: 55px;
+  height: 55px;
+  font-weight: 700;
+  cursor: pointer;
+  margin: 2%;
+  font-family: "Mulish", sans-serif;
+  font-size: 1.5em;
+  text-align: center;
+}
+
 input[type="button"]:hover {
   background-color: #c0c0f0; /*цвет ячейки*/
 }
