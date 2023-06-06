@@ -1,5 +1,6 @@
 package com.javaee.sushiee.servlet;
 
+import com.javaee.sushiee.model.Person;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -16,11 +17,13 @@ public class PersonServlet extends HttpServlet {
 
     public void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 
+        Person person = new Person();
+        person.setName(req.getParameter("userName"));
+        person.setSurname(req.getParameter("userSurname"));
+        person.setPhoneNumber(Integer.parseInt(req.getParameter("userPhoneNumber")));
+        person.setEmail(req.getParameter("userEmail"));
 
-        req.setAttribute("userSurname", req.getParameter("userSurname"));
-        req.setAttribute("userName", req.getParameter("userName"));
-        req.setAttribute("userPhoneNumber", req.getParameter("userPhoneNumber"));
-        req.setAttribute("userEmail", req.getParameter("userEmail"));
+        req.setAttribute("Person", person);
         req.getRequestDispatcher("/view/UserAccountPage.jsp").forward(req,resp);
 
     }
