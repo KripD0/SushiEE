@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;700;900&display=swap');
+
+/*
+#ccffff - regular
+#c0c0f0 - darker (border)
+#fff0f0 - peach, for sections
+*/
+img {
+    vertical-align: center;
+    horiz-align: center;
+    border-radius: 10px;
+    width: 300px;
+}
+
+nav {
+    background-color: #000000; /*цвет фона*/
+    color: white; /*цвет текста*/
+}
+
+.logo {
+    width: 10%;
+}
+
+.networks {
+    width: 0.9em;
+    height: 0.9em;
+}
+
+footer {
+    background-color: #ccccff;
+    padding: 15px;
+}
+
+h1, h2 {
+    font-weight: 900;
+    margin: 0.5em;
+}
+
+h3, h4, h5, h6 {
+    font-weight: 500;
+    margin: 0.5em 0 0 0;
+}
+
+article {
+    width: 60%;
+    margin: 1em auto; /*Отсуп за границу - для артИкла, auto центрирует по середине*/
+    background-color: #000000; /*цвет фона*/
+    color: white; /*цвет текста*/
+}
+
+span {
+    font-weight: 700;
+    font-size: 1.8em;
+}
+
+body {
+    background-color: #000000; /*цвет фона*/
+    color: white; /*цвет текста*/
+    font-family: "Mulish", sans-serif;
+    font-size: 21px;
+    text-align: center;
+}
+
+footer {
+    background-color: #000000; /*цвет фона*/
+    color: white; /*цвет текста*/
+}
+
+section {
+    margin-bottom: 1%;
+    background-color: #000000; /*цвет фона*/
+    color: white; /*цвет текста*/
+    border: 5px solid #ccccff;
+    border-radius: 5%;
+}
+
+
+input[type="button"] {
+    background-color: #000000; /*цвет фона*/
+    color: white; /*цвет текста*/
+    border-radius: 22px;
+    border: 5px solid #c0c0f0;
+    width: 55px;
+    height: 55px;
+    font-weight: 700;
+    cursor: pointer;
+    margin: 2%;
+    font-family: "Mulish", sans-serif;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+input[type="submit"] {
+    background-color: #000000; /*цвет фона*/
+    color: white; /*цвет текста*/
+    border-radius: 22px;
+    border: 5px solid #c0c0f0;
+    width: 55px;
+    height: 55px;
+    font-weight: 700;
+    cursor: pointer;
+    margin: 2%;
+    font-family: "Mulish", sans-serif;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+input[type="button"]:hover {
+    background-color: #c0c0f0; /*цвет ячейки*/
+}
+
+
+input[type="button"]:active {
+    color: #fff0f0; /*цвет ячейки*/
+}
+
+header {
+    margin-top: 75px;
+}
+
+
+input[type="text"] {
+    background-color: #000000; /*цвет фона*/
+    color: white; /*цвет текста*/
+    border-radius: 1%;
+    border: 5px solid #ccccff;
+    width: 420px;
+    height: 42px;
+    cursor: text;
+    font-family: "Mulish", sans-serif;
+    font-size: 21px;
+}
+
+.navpanel {
+    float: left;
+    top: 0;
+    position: fixed; /*фиксация*/
+    z-index: 2;
+    width:  99%;
+    background-color: #000000; /*цвет фона*/
+    color: white; /*цвет текста*/
+    border: 5px solid #c0c0f0;
+}
+.navtext {
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 2em;
+    background-color: #000000; /*цвет фона*/
+    color: white; /*цвет текста*/
+}
+.noborder {
+    border: 0;
+    padding: 0;
+    font-size: 35px;
+    background-color: #000000; /*цвет фона*/
+    color: white; /*цвет текста*/
+}
+
+/* Настройки для таблиц */
+table {
+    margin: auto;
+    padding: 1em;
+    width: 50%;
+    background-color: #000000; /*цвет фона*/
+    color: white; /*цвет текста*/
+}
+
+tr, td {
+    border: 5px solid #ccccff;
+    padding: 0 1em;
+    border-radius: 1%;
+}
+
+td:last-child {
+    border-radius: 1% 5% 5% 1%;
+}
+
+td:first-child {
+    border-radius: 5% 1% 1% 5%;
+}

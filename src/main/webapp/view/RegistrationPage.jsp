@@ -9,7 +9,7 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 <head>
     <title>Вход в личный кабинет</title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/mystyle.css"/>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/darkstyle.css"/>
 </head>
 <body>
 <header>

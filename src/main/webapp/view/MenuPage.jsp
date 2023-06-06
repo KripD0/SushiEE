@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>Фудзи-Суши: Меню</title>
   <link rel="icon" href="${pageContext.request.contextPath}/icon.png"/>
-  <link rel="stylesheet" href="${pageContext.request.contextPath}/css/mystyle.css"/>
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/css/darkstyle.css"/>
   <script src="${pageContext.request.contextPath}/js/makeOrder.js"></script> <!--Подкючение джс файла-->
 </head>
 

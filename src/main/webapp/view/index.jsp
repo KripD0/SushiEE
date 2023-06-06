@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>Фудзи-Суши: Главная</title>
   <link rel="icon" href="../icon.png"/>
-  <link rel="stylesheet" href="../css/mystyle.css"/>
+  <link rel="stylesheet" href="../css/darkstyle.css"/>
 </head>
 
 <body>
@@ -177,6 +177,7 @@
 </section>
 <br>
 <footer>
+    <input type="submit" name="registration" value="Сменить тему" style="width: 30%; height: 10%">
   <MARQUEE>Заказывайте наши ароматные и вкусные блюда! Приятного аппетита!
     Связь с поддержкой: Почта: fuji-sushi@mail.ru, Телефон: 8(800)555-35-35
   </MARQUEE>
