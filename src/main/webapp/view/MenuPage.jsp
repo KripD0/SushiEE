@@ -19,10 +19,10 @@
 <nav>
   <table class="navpanel">
     <tr>
-      <td><a href="index.jsp" class="navtext">Главная</a></td>
-      <td><a href="MenuPage.jsp" class="navtext">Меню</a></td>
-      <td><a href="PromoPage.jsp"  class="navtext">Скидки</a></td>
-      <td><a href="RegistrationPage.jsp"  class="navtext">Регистрация</a></td>
+      <td><a href="${pageContext.request.contextPath}/view/index.jsp" class="navtext">Главная</a></td>
+      <td><a href="${pageContext.request.contextPath}/view/MenuPage.jsp" class="navtext">Меню</a></td>
+      <td><a href="${pageContext.request.contextPath}/view/PromoPage.jsp"  class="navtext">Скидки</a></td>
+      <td><a href="${pageContext.request.contextPath}/view/RegistrationPage.jsp"  class="navtext">Личный кабинет</a></td>
     </tr>
   </table>
 </nav>

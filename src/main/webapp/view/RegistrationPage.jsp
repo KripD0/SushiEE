@@ -8,7 +8,7 @@
       xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 <head>
-    <title>Регистрация</title>
+    <title>Вход в личный кабинет</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/mystyle.css"/>
 </head>
 <body>
@@ -19,22 +19,22 @@
 <nav>
     <table class="navpanel">
         <tr>
-            <td><a href="index.jsp" class="navtext">Главная</a></td>
-            <td><a href="MenuPage.jsp" class="navtext">Меню</a></td>
-            <td><a href="PromoPage.jsp" class="navtext">Скидки</a></td>
-            <td><a href="RegistrationPage.jsp" class="navtext">Регистрация</a></td>
+            <td><a href="${pageContext.request.contextPath}/view/index.jsp" class="navtext">Главная</a></td>
+            <td><a href="${pageContext.request.contextPath}/view/MenuPage.jsp" class="navtext">Меню</a></td>
+            <td><a href="${pageContext.request.contextPath}/view/PromoPage.jsp"  class="navtext">Скидки</a></td>
+            <td><a href="${pageContext.request.contextPath}/view/RegistrationPage.jsp"  class="navtext">Личный кабинет</a></td>
         </tr>
     </table>
 </nav>
 <FORM method="post" action="${pageContext.request.contextPath}/registration">
-    <h1>Регистрация:
+    <h1>Авторизация:
     </h1>
     <table class="noborder">
         <tr class="noborder" >
             <td class="noborder" style="text-align: right;">Фамилия:</td>
             <td class="noborder" style="text-align: left;">
                 <label>
-                    <input type="text" name=userSurname>
+                    <input type="text" name="userSurname" placeholder="Иванов">
                 </label>
             </td>
         </tr>
@@ -43,7 +43,7 @@
             </td>
             <td class="noborder" style="text-align: left;">
                 <label>
-                    <input type="text" name=userName>
+                    <input type="text" name="userName" placeholder="Иван">
                 </label>
             </td>
         </tr>
@@ -52,7 +52,7 @@
             </td>
             <td class="noborder" style="text-align: left;">
                 <label>
-                    <input type="text" name=userPhoneNumber>
+                    <input type="text" name="userPhoneNumber" placeholder="+7(777)777-77-77">
                 </label>
             </td>
         </tr>
@@ -61,13 +61,13 @@
             </td>
             <td class="noborder" style="text-align: left;">
                 <label>
-                    <input type="text" name=userEmail>
+                    <input type="text" name=userEmail placeholder="myemail@site.com">
                 </label>
             </td>
         </tr>
         <tr class="noborder">
             <td colspan="2"  class="noborder ">
-                <input type="submit" name="registration" value="Зарегистрироваться" style="width: 50%; height: 10%">
+                <input type="submit" name="registration" value="Авторизоваться" style="width: 50%; height: 10%">
             </td>
         </tr>
     </table>

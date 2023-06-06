@@ -22,13 +22,13 @@
             <td><a href="${pageContext.request.contextPath}/view/index.jsp" class="navtext">Главная</a></td>
             <td><a href="${pageContext.request.contextPath}/view/MenuPage.jsp" class="navtext">Меню</a></td>
             <td><a href="${pageContext.request.contextPath}/view/PromoPage.jsp"  class="navtext">Скидки</a></td>
-            <td><a href="${pageContext.request.contextPath}/view/RegistrationPage.jsp"  class="navtext">Регистрация</a></td>
+            <td><a href="${pageContext.request.contextPath}/view/RegistrationPage.jsp"  class="navtext">Личный кабинет</a></td>
         </tr>
     </table>
 </nav>
 <FORM method="post" action="${pageContext.request.contextPath}/registration">
-    <p>Личный кабинет.
-    </p>
+    <p>Добро пожаловать в личный кабинет!</p>
+    <p>Ваши данные для входа: </p>
     <p>
         <br>Фамилия:
         <label>
