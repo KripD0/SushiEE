@@ -16,7 +16,7 @@ public class Person {
     private int id;
     private String surname;
     private String name;
-    private long phoneNumber;
+    private String phoneNumber;
     private String email;
     private String password;
 }

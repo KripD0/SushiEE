@@ -18,7 +18,6 @@ import java.net.URLEncoder;
 @WebServlet(value = "/FuJEE/registration")
 public class RegistrationServlet extends HttpServlet {
 
-
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         request.getRequestDispatcher("/view/RegistrationPage.jsp").forward(request, response);
@@ -30,13 +29,13 @@ public class RegistrationServlet extends HttpServlet {
         Person person = new Person();
         person.setName(req.getParameter("userName"));
         person.setSurname(req.getParameter("userSurname"));
-        person.setPhoneNumber(Integer.parseInt(req.getParameter("userPhoneNumber")));
+        person.setPhoneNumber(req.getParameter("userPhoneNumber"));
         person.setEmail(req.getParameter("userEmail"));
         person.setPassword(req.getParameter("userPassword"));
 
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(SpringConfig.class);
         PersonDAO personDAO = context.getBean(PersonDAO.class);
-        personDAO.savePerson(person);
+        personDAO.saveAccount(person);
 
         Gson gson = new Gson();
         String jsonPerson = gson.toJson(person);
@@ -46,6 +45,5 @@ public class RegistrationServlet extends HttpServlet {
 
         req.setAttribute("Person", person);
         resp.sendRedirect("/FuJEE/account");
-
     }
 }

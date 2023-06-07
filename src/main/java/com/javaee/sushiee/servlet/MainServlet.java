@@ -9,6 +9,9 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
+//TODO Проверку почты специализировать, сделать красивое оформление в личном кабинете, добавить кнопу выйти, изменения данных, удаления акка.
+//TODO выровнять у Данилки Кашина по центру поля входа и регистрации. Сделать обработку ошибки uniq email.
+
 @WebServlet(value = "/FuJEE")
 public class MainServlet extends HttpServlet {
 

@@ -38,7 +38,7 @@
         </tr>
     </table>
 </nav>
-<form method="put" action="/FuJEE/registration">
+<form method="get" action="/FuJEE/auth">
     <h1>Авторизация:</h1>
     <table class="noborder">
         <tr class="noborder">
