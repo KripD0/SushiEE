@@ -46,7 +46,7 @@
             </td>
             <td class="noborder" style="text-align: left;">
                 <label>
-                    <input type="text" name=userEmail placeholder="myemail@site.com" id="emailFiel2" required>
+                    <input type="text" name=userEmail placeholder="myemail@site.com" id="emailField2" required>
                 </label>
             </td>
         </tr>

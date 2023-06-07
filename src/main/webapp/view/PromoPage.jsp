@@ -94,7 +94,7 @@
     <label>
         <input type="text" id="emailField" placeholder="myemail@site.com"/>
     </label>
-    <input type="button" onclick="checkEmail(emailField);" value="Получить" style="width: 200px; height: 100px"/>
+    <input type="button" onclick="checkEmailWithPromo(emailField);" value="Получить" style="width: 200px; height: 100px"/>
 </section>
 <footer>
     <MARQUEE>Заказывайте наши ароматные и вкусные блюда! Приятного аппетита!
