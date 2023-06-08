@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import com.javaee.sushiee.config.SpringConfig;
 import com.javaee.sushiee.dao.PersonDAO;
 import com.javaee.sushiee.model.Person;
+import jakarta.servlet.ServletConfig;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.Cookie;
@@ -17,6 +18,14 @@ import java.net.URLEncoder;
 
 @WebServlet(value = "/FuJEE/registration")
 public class RegistrationServlet extends HttpServlet {
+
+    private PersonDAO personDAO;
+
+    @Override
+    public void init(ServletConfig config){
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(SpringConfig.class);
+        this.personDAO = context.getBean(PersonDAO.class);
+    }
 
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
@@ -33,8 +42,6 @@ public class RegistrationServlet extends HttpServlet {
         person.setEmail(req.getParameter("userEmail"));
         person.setPassword(req.getParameter("userPassword"));
 
-        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(SpringConfig.class);
-        PersonDAO personDAO = context.getBean(PersonDAO.class);
         personDAO.saveAccount(person);
 
         Gson gson = new Gson();

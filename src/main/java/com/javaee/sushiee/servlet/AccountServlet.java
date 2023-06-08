@@ -21,19 +21,20 @@ public class AccountServlet extends HttpServlet {
         Cookie accountCookie = new Cookie("account", null);
         accountCookie.setMaxAge(24 * 60 * 60);
 
-        for (Cookie cookie:allCookies){
-            if(cookie.getName().equals("account")){
+        for (Cookie cookie : allCookies) {
+            if (cookie.getName().equals("account")) {
                 accountCookie = cookie;
             }
         }
-        if(accountCookie.getValue() != null){
-            String jsonPerson = URLDecoder.decode(accountCookie.getValue(), "UTF-8");
-            Gson gson = new Gson();
-            Person person = gson.fromJson(jsonPerson, Person.class);
 
+        String jsonPerson = URLDecoder.decode(accountCookie.getValue(), "UTF-8");
+        Gson gson = new Gson();
+        Person person = gson.fromJson(jsonPerson, Person.class);
+
+        if (accountCookie.getValue() != null && person != null) {
             req.setAttribute("Person", person);
             req.getRequestDispatcher("/view/UserAccountPage.jsp").forward(req, resp);
-        }else {
+        } else {
             resp.sendRedirect("/FuJEE/registration");
         }
     }

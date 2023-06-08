@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import com.javaee.sushiee.config.SpringConfig;
 import com.javaee.sushiee.dao.PersonDAO;
 import com.javaee.sushiee.model.Person;
+import jakarta.servlet.ServletConfig;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.Cookie;
@@ -18,13 +19,19 @@ import java.net.URLEncoder;
 @WebServlet(value = "/FuJEE/auth")
 public class AuthServlet extends HttpServlet {
 
+    private PersonDAO personDAO;
+
+    @Override
+    public void init(ServletConfig config){
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(SpringConfig.class);
+        this.personDAO = context.getBean(PersonDAO.class);
+    }
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
         String email = req.getParameter("userEmail");
         String password = req.getParameter("userPassword");
 
-        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(SpringConfig.class);
-        PersonDAO personDAO = context.getBean(PersonDAO.class);
         Person person = personDAO.getAccountByEmail(email, password);
         if(person != null){
             req.setAttribute("Person", person);

@@ -32,50 +32,61 @@
         <tr class="noborder">
             <td class="noborder"><a href="${pageContext.request.contextPath}/FuJEE" class="navtext">Главная</a></td>
             <td class="noborder"><a href="${pageContext.request.contextPath}/FuJEE/menu" class="navtext">Меню</a></td>
-            <td class="noborder"><a href="${pageContext.request.contextPath}/FuJEE/promo" class="navtext">Скидки</a></td>
-            <td class="noborder"><a href="${pageContext.request.contextPath}/FuJEE/account" class="navtext">Личный кабинет</a></td>
+            <td class="noborder"><a href="${pageContext.request.contextPath}/FuJEE/promo" class="navtext">Скидки</a>
+            </td>
+            <td class="noborder"><a href="${pageContext.request.contextPath}/FuJEE/account" class="navtext">Личный
+                кабинет</a></td>
         </tr>
     </table>
 </nav>
-<FORM method="post" action="${pageContext.request.contextPath}/FuJEE/registration">
+<form method="post" action="${pageContext.request.contextPath}/FuJEE/registration">
     <%Person person = (Person) request.getAttribute("Person");%>
     <section><h2>Добро пожаловать в личный кабинет!</h2>
         <table>
             <tr>
                 <td class="noborder"> Фамилия:</td>
-                <td><%=person.getSurname()%></td>
+                <td><%=person.getSurname()%>
+                </td>
             </tr>
             <tr>
                 <td class="noborder"> Имя:</td>
-                <td><%=person.getName()%></td>
+                <td><%=person.getName()%>
+                </td>
             </tr>
             <tr>
                 <td class="noborder"> Номер телефона:</td>
-                <td><%=person.getPhoneNumber()%></td>
+                <td><%=person.getPhoneNumber()%>
+                </td>
             </tr>
-            <tr >
+            <tr>
                 <td class="noborder"> Электронная почта:</td>
-                <td><%=person.getEmail()%></td>
+                <td><%=person.getEmail()%>
+                </td>
             </tr>
             <tr>
                 <td class="noborder"> Пароль:</td>
-                <td><%=person.getPassword()%></td>
+                <td><%=person.getPassword()%>
+                </td>
             </tr>
         </table>
-        <form>
-            <input type="submit" name="exitAccount" value="Выйти из аккаунта" style="width: 45%; height: 10%">
-        </form>
     </section>
-    <section>
-        <form>
-            <input type="submit" name="updateAccount" value="Изменить данные аккаунта" style="width: 45%; height: 10%">
-        </form>
-    </section>
-    <section>
-        <form>
-            <input type="submit" name="deleteAccount" value="Удалить аккаунт" style="width: 45%; height: 10%; background-color: red;">
-        </form>
-    </section>
-</FORM>
+</form>
+<form method="get" action="/FuJEE/exitAccount">
+    <label>
+        <input type="submit" name="exitAccount" value="Выйти из аккаунта" style="width: 45%; height: 10%;">
+    </label>
+</form>
+</section>
+<section>
+    <form>
+        <input type="submit" name="updateAccount" value="Изменить данные аккаунта" style="width: 45%; height: 10%">
+    </form>
+</section>
+<section>
+    <form>
+        <input type="submit" name="deleteAccount" value="Удалить аккаунт"
+               style="width: 45%; height: 10%; background-color: red;">
+    </form>
+</section>
 </body>
 </html>
