@@ -62,6 +62,19 @@
                 <td><%=person.getPassword()%></td>
             </tr>
         </table>
+        <form>
+            <input type="submit" name="exitAccount" value="Выйти из аккаунта" style="width: 45%; height: 10%">
+        </form>
+    </section>
+    <section>
+        <form>
+            <input type="submit" name="updateAccount" value="Изменить данные аккаунта" style="width: 45%; height: 10%">
+        </form>
+    </section>
+    <section>
+        <form>
+            <input type="submit" name="deleteAccount" value="Удалить аккаунт" style="width: 45%; height: 10%; background-color: red;">
+        </form>
     </section>
 </FORM>
 </body>
