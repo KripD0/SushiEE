@@ -4,78 +4,95 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <% String theme = "peach";
-    String linkCSS;
-    Cookie[] cookie = request.getCookies();
-    if (cookie != null) {
-      for (Cookie cook : cookie) {
-        if (cook.getName().equals("theme")) {
-          theme = cook.getValue();
+    <% String theme = "peach";
+        String linkCSS;
+        Cookie[] cookie = request.getCookies();
+        if (cookie != null) {
+            for (Cookie cook : cookie) {
+                if (cook.getName().equals("theme")) {
+                    theme = cook.getValue();
+                }
+            }
         }
-      }
-    }
-    if (theme.equals("peach")) {
-      linkCSS = "../css/mystyle.css";
-    } else {
-      linkCSS = "../css/darkstyle.css";
-    }%>
-  <title>Фудзи-Суши: Аккаунт</title>
-  <link rel="stylesheet" href="<%=linkCSS%>"/>
+        if (theme.equals("peach")) {
+            linkCSS = "../css/mystyle.css";
+        } else {
+            linkCSS = "../css/darkstyle.css";
+        }%>
+    <title>Фудзи-Суши: Аккаунт</title>
+    <link rel="stylesheet" href="<%=linkCSS%>"/>
 </head>
 <body>
 <header>
-  <img src="../icon.png" alt="Логотип" class="logo">
-  <h1>Фудзи-Суши</h1>
+    <img src="../icon.png" alt="Логотип" class="logo">
+    <h1>Фудзи-Суши</h1>
 </header>
 <nav>
-  <table style="width: 99%;" class="navpanel">
-    <tr class="noborder">
-      <td class="noborder"><a href="${pageContext.request.contextPath}/FuJEE" class="navtext">Главная</a></td>
-      <td class="noborder"><a href="${pageContext.request.contextPath}/FuJEE/menu" class="navtext">Меню</a></td>
-      <td class="noborder"><a href="${pageContext.request.contextPath}/FuJEE/promo" class="navtext">Скидки</a>
-      </td>
-      <td class="noborder"><a href="${pageContext.request.contextPath}/FuJEE/account" class="navtext">Личный
-        кабинет</a></td>
-    </tr>
-  </table>
-</nav>
-<form method="post" action="${pageContext.request.contextPath}/FuJEE/registration">
-  <%Person person = (Person) request.getAttribute("Person");%>
-  <section><h2>Изменение личных данных.</h2>
-    <table>
-      <tr>
-        <td class="noborder"> Фамилия:</td>
-        <td><%=person.getSurname()%>
-        </td>
-      </tr>
-      <tr>
-        <td class="noborder"> Имя:</td>
-        <td><%=person.getName()%>
-        </td>
-      </tr>
-      <tr>
-        <td class="noborder"> Номер телефона:</td>
-        <td><%=person.getPhoneNumber()%>
-        </td>
-      </tr>
-      <tr>
-        <td class="noborder"> Электронная почта:</td>
-        <td><%=person.getEmail()%>
-        </td>
-      </tr>
-      <tr>
-        <td class="noborder"> Пароль:</td>
-        <td><%=person.getPassword()%>
-        </td>
-      </tr>
+    <table style="width: 99%;" class="navpanel">
+        <tr class="noborder">
+            <td class="noborder"><a href="${pageContext.request.contextPath}/FuJEE" class="navtext">Главная</a></td>
+            <td class="noborder"><a href="${pageContext.request.contextPath}/FuJEE/menu" class="navtext">Меню</a></td>
+            <td class="noborder"><a href="${pageContext.request.contextPath}/FuJEE/promo" class="navtext">Скидки</a>
+            </td>
+            <td class="noborder"><a href="${pageContext.request.contextPath}/FuJEE/account" class="navtext">Личный
+                кабинет</a></td>
+        </tr>
     </table>
-  </section>
+</nav>
+
+<form method="post" action="/FuJEE/changeAccount">
+    <table class="noborder">
+        <tr class="noborder">
+            <td class="noborder" style="text-align: right;">Фамилия:</td>
+            <td class="noborder" style="text-align: left;">
+                <label>
+                    <input type="text" name="userSurname" placeholder="Иванов">
+                </label>
+            </td>
+        </tr>
+        <tr class="noborder">
+            <td class="noborder" style="text-align: right;">Имя:
+            </td>
+            <td class="noborder" style="text-align: left;">
+                <label>
+                    <input type="text" name="userName" placeholder="Иван">
+                </label>
+            </td>
+        </tr>
+        <tr class="noborder">
+            <td class="noborder" style="text-align: right;">Телефон:
+            </td>
+            <td class="noborder" style="text-align: left;">
+                <label>
+                    <input type="text" name="userPhoneNumber" placeholder="+7(777)777-77-77">
+                </label>
+            </td>
+        </tr>
+        <tr class="noborder">
+            <td class="noborder" style="text-align: right;">Email:
+            </td>
+            <td class="noborder" style="text-align: left;">
+                <label>
+                    <input type="text" name=userEmail placeholder="myemail@site.com" id="emailField" required>
+                </label>
+            </td>
+        </tr>
+        <tr class="noborder">
+            <td class="noborder" style="text-align: right;">Пароль:
+            </td>
+            <td class="noborder" style="text-align: left;">
+                <label>
+                    <input type="text" name=userPassword placeholder="******">
+                </label>
+            </td>
+        </tr>
+        <tr class="noborder">
+            <td colspan="2" class="noborder ">
+                <input type="submit" name="changeAccount" value="Сохранить изменения" style="width: 70%; height: 10%"
+                       onclick="checkEmail(emailField)">
+            </td>
+        </tr>
+    </table>
 </form>
-<form method="post" action="/FuJEE/exitAccount">
-  <label>
-    <input type="submit" name="saveChangeAccount" value="Сохранить изменения" style="width: 45%; height: 10%;">
-  </label>
-</form>
-</section>
 </body>
 </html>

@@ -71,15 +71,17 @@
         </table>
     </section>
 </form>
-<form method="get" action="/FuJEE/exitAccount">
-    <label>
-        <input type="submit" name="exitAccount" value="Выйти из аккаунта" style="width: 45%; height: 10%;">
-    </label>
-</form>
+<section>
+    <form method="get" action="/FuJEE/exitAccount">
+        <label>
+            <input type="submit" name="exitAccount" value="Выйти из аккаунта" style="width: 45%; height: 10%;">
+        </label>
+    </form>
 </section>
 <section>
     <form method="get" action="/FuJEE/changeAccount">
-        <input type="submit" name="updateAccount" value="Изменить данные аккаунта" style="width: 45%; height: 10%">
+        <input type="submit" name="updateAccount" value="Изменить данные аккаунта" style="width: 45%; height: 10%"
+               onclick="document.location.href='/FuJEE/changeAccount'">
     </form>
 </section>
 <section>

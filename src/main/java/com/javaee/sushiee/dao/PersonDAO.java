@@ -13,22 +13,22 @@ public class PersonDAO {
         this.jdbcTemplate = jdbcTemplate;
     }
 
-    public void saveAccount(Person person){
+    public void saveAccount(Person person) {
         jdbcTemplate.update("INSERT INTO person(surname, name, phonenumber, email, password) VALUES (?, ?, ?, ?, ?)", person.getSurname(), person.getName()
                 , person.getPhoneNumber(), person.getEmail(), person.getPassword());
     }
 
-    public Person getAccountByEmail(String email, String password){
+    public Person getAccountByEmail(String email, String password) {
         return jdbcTemplate.query("SELECT * FROM person WHERE email = ? AND password = ?", new Object[]{email, password}
                 , new BeanPropertyRowMapper<>(Person.class)).stream().findAny().orElse(null);
     }
 
-    public void deleteAccount(String email){
+    public void deleteAccount(String email) {
         jdbcTemplate.update("DELETE FROM person WHERE email = ?", email);
     }
 
-    public void updateAccount(Person person, String oldEmail){
+    public void updateAccount(Person person, String oldEmail) {
         jdbcTemplate.update("UPDATE person SET surname = ?, name = ?, phonenumber = ?, email = ?, password = ? WHERE email = ?", person.getSurname(), person.getName()
-        ,person.getPhoneNumber(), person.getEmail(), person.getPassword(), oldEmail);
+                , person.getPhoneNumber(), person.getEmail(), person.getPassword(), oldEmail);
     }
 }

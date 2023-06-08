@@ -13,12 +13,12 @@ import javax.sql.DataSource;
 public class SpringConfig {
 
     @Bean
-    public DataSource dataSource(){
+    public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("org.postgresql.Driver");
-        dataSource.setUrl("jdbc:postgresql://localhost:5432/sushi");
+        dataSource.setUrl("jdbc:postgresql://localhost:5432/sushie");
         dataSource.setUsername("postgres");
-        dataSource.setPassword("postgres");
+        dataSource.setPassword("3gor");
         return dataSource;
     }
 
@@ -26,7 +26,7 @@ public class SpringConfig {
     //Igor - jdbc:postgresql://localhost:5432/sushie, 3gor
 
     @Bean
-    public JdbcTemplate jdbcTemplate(DataSource dataSource){
+    public JdbcTemplate jdbcTemplate(DataSource dataSource) {
         return new JdbcTemplate(dataSource);
     }
 }
