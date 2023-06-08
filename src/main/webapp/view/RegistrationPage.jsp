@@ -55,7 +55,7 @@
             </td>
             <td class="noborder" style="text-align: left;">
                 <label>
-                    <input type="text" name=userPassword placeholder="******">
+                    <input type="text" name=userPassword placeholder="******" required>
                 </label>
             </td>
         </tr>

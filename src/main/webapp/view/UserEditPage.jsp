@@ -46,7 +46,7 @@
             <td class="noborder" style="text-align: right;">Фамилия:</td>
             <td class="noborder" style="text-align: left;">
                 <label>
-                    <input type="text" name="userSurname" placeholder="Иванов">
+                    <input type="text" name="userSurname" placeholder="Иванов" value=${userSurname}>
                 </label>
             </td>
         </tr>
@@ -55,7 +55,7 @@
             </td>
             <td class="noborder" style="text-align: left;">
                 <label>
-                    <input type="text" name="userName" placeholder="Иван">
+                    <input type="text" name="userName" placeholder="Иван" value=${userName}>
                 </label>
             </td>
         </tr>
@@ -64,7 +64,7 @@
             </td>
             <td class="noborder" style="text-align: left;">
                 <label>
-                    <input type="text" name="userPhoneNumber" placeholder="+7(777)777-77-77">
+                    <input type="text" name="userPhoneNumber" placeholder="+7(777)777-77-77" value=${userPhoneNumber}>
                 </label>
             </td>
         </tr>
@@ -73,7 +73,7 @@
             </td>
             <td class="noborder" style="text-align: left;">
                 <label>
-                    <input type="text" name=userEmail placeholder="myemail@site.com" id="emailField" required>
+                    <input type="text" name=userEmail placeholder="myemail@site.com" id="emailField" required value=${userEmail}>
                 </label>
             </td>
         </tr>
@@ -82,7 +82,7 @@
             </td>
             <td class="noborder" style="text-align: left;">
                 <label>
-                    <input type="text" name=userPassword placeholder="******">
+                    <input type="text" name=userPassword placeholder="******" value=${userPassword} required>
                 </label>
             </td>
         </tr>
