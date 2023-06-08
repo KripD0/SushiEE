@@ -78,12 +78,12 @@
 </form>
 </section>
 <section>
-    <form>
+    <form method="get" action="/FuJEE/changeAccount">
         <input type="submit" name="updateAccount" value="Изменить данные аккаунта" style="width: 45%; height: 10%">
     </form>
 </section>
 <section>
-    <form>
+    <form method="post" action="/FuJEE/exitAccount">
         <input type="submit" name="deleteAccount" value="Удалить аккаунт"
                style="width: 45%; height: 10%; background-color: red;">
     </form>
